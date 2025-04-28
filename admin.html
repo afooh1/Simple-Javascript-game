@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/admin.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="admin-container">
+        <h1>Admin Login</h1>
+        
+        <form id="adminLoginForm" class="admin-form">
+            <div class="form-group">
+                <label for="adminUsername">Username:</label>
+                <input type="text" id="adminUsername" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="adminPassword">Password:</label>
+                <input type="password" id="adminPassword" required>
+            </div>
+            
+            <button type="submit">Login</button>
+        </form>
+        
+        <div id="adminPanel" class="hidden">
+            <h2>Admin Panel</h2>
+            
+            <div class="admin-section">
+                <h3>Leaderboard</h3>
+                <table id="leaderboardTable">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Username</th>
+                            <th>High Score</th>
+                            <th>Games Played</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            
+            <div class="admin-section">
+                <h3>User Management</h3>
+                <input type="text" id="searchUser" placeholder="Search users...">
+                <table id="usersTable">
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/admin.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
